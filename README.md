@@ -155,23 +155,14 @@ La red de puntos del fondo se apaga en `js/main.js`, bloque `08. RED VASCULAR`.
 
 ## Publicar en EasyPanel
 
-### 1. Subir a GitHub
+### 1. Repositorio
 
-Desde esta carpeta:
-
-```bash
-git init
-git add .
-git commit -m "Sitio web Vascular Clinic"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/TU-REPO.git
-git push -u origin main
-```
+Ya está conectado a **https://github.com/Antonio598/vascular-clinic** (rama `main`).
 
 ### 2. Crear el servicio en EasyPanel
 
 1. **Create Service → App**
-2. En *Source*, elige **GitHub** y selecciona el repositorio y la rama `main`
+2. En *Source*, elige **GitHub**, el repositorio `Antonio598/vascular-clinic` y la rama `main`
 3. En *Build*, deja **Dockerfile** (EasyPanel lo detecta solo al encontrarlo en la raíz)
 4. En *Domains*, agrega tu dominio y pon el **puerto 80**
 5. Activa el certificado **SSL de Let's Encrypt**
