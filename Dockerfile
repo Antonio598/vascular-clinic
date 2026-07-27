@@ -10,7 +10,8 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Cada COPY es su propia capa: tocar solo el CSS no reconstruye el resto
-COPY index.html /usr/share/nginx/html/
+# (index.html, privacidad.html y terminos.html)
+COPY *.html     /usr/share/nginx/html/
 COPY css/       /usr/share/nginx/html/css/
 COPY js/        /usr/share/nginx/html/js/
 COPY assets/    /usr/share/nginx/html/assets/

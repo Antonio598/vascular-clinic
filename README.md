@@ -24,11 +24,14 @@ Y visitar `http://localhost:8000`.
 
 ```
 ├── index.html          Todo el contenido y los textos
+├── privacidad.html     Política de Privacidad y de Cookies
+├── terminos.html       Términos y Condiciones
 ├── css/
 │   ├── styles.css      Colores, tipografía, layout y componentes
 │   └── animations.css  Todas las animaciones
 ├── js/
-│   └── main.js         WhatsApp, scroll, menú, FAQ, canvas
+│   ├── main.js         WhatsApp, scroll, menú, FAQ, canvas
+│   └── cookies.js      Banner de cookies y consentimiento
 ├── assets/
 │   ├── logo.png        Logo recortado, fondo transparente (header y favicon)
 │   └── logo-blanco.png Versión en blanco, para el footer oscuro
@@ -122,6 +125,33 @@ por:
 
 La clase `.doctor__photo` ya existe en el CSS. Hay un comentario en el HTML que te indica
 el punto exacto.
+
+### Banner de cookies y páginas legales
+
+El banner **no está en el HTML**: lo construye [`js/cookies.js`](js/cookies.js), así existe en un
+solo lugar y las tres páginas lo comparten. Para cambiar su texto, edita ese archivo.
+
+La respuesta se guarda en `localStorage` bajo `vc_consent`, con dos valores posibles:
+`todas` (aceptó también las analíticas) o `esenciales`.
+
+**Cuando agregues el píxel de Meta o Google Analytics** para tus campañas, engánchalo al
+consentimiento en vez de cargarlo siempre:
+
+```js
+window.addEventListener('vc:consent', function (e) {
+  if (e.detail === 'todas') {
+    // aquí va el script de analítica
+  }
+});
+```
+
+El enlace **"Configurar cookies"** del footer (atributo `data-abrir-cookies`) vuelve a mostrar
+el banner para que el visitante cambie de opinión.
+
+> **Importante:** el texto legal está redactado para **Galenus AI** como plataforma SaaS
+> (menciona cuentas de usuario, contraseñas y datos de pacientes almacenados). Esta web es
+> solo informativa y no recopila ningún dato. Conviene que un abogado adapte el texto a este
+> sitio en concreto.
 
 ### Cambiar los colores
 
