@@ -1,0 +1,17 @@
+# No entran a la imagen de Docker
+.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+*.md
+
+# El logo original con espacios y paréntesis: dentro del contenedor
+# solo usamos assets/logo.png
+Logo (1).png
+
+# Basura del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+node_modules

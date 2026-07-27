@@ -1,0 +1,18 @@
+# Normaliza los saltos de línea: en el repositorio siempre LF.
+# Evita que archivos creados en Windows (CRLF) rompan el build en Linux.
+* text=auto eol=lf
+
+# Estos deben ser LF sí o sí: los lee nginx dentro del contenedor
+Dockerfile   text eol=lf
+nginx.conf   text eol=lf
+*.sh         text eol=lf
+
+# Binarios: no tocar
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary

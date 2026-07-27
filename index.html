@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es-PA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vascular Clinic Panamá | Especialistas en Várices y Salud Venosa</title>
+<meta name="description" content="Especialistas en salud venosa en Panamá. Consulta vascular, escleroterapia, Eco-Doppler y curación avanzada en 7 sedes. Agenda tu cita por WhatsApp al +507 6986-6587.">
+<meta name="theme-color" content="#164A8A">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vascularclinic.com/">
+
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PA">
+<meta property="og:site_name" content="Vascular Clinic">
+<meta property="og:title" content="Vascular Clinic Panamá | Especialistas en Várices y Salud Venosa">
+<meta property="og:description" content="Consulta vascular, escleroterapia y Eco-Doppler en 7 sedes de Panamá. Agenda por WhatsApp.">
+<meta property="og:image" content="assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vascular Clinic Panamá">
+<meta name="twitter:description" content="Especialistas en salud venosa. 7 sedes en Panamá. Agenda por WhatsApp.">
+<meta name="twitter:image" content="assets/logo.png">
+
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/logo.png">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<!-- Marca el documento como "con JavaScript" ANTES de pintar, para que las
+     animaciones puedan ocultar elementos sin parpadeo. Si el JS está desactivado
+     esta clase nunca se añade y la página se ve completa y estática. -->
+<script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRELOADER — la "V" del logo se dibuja sola
+     ══════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true">
+      <path class="preloader__v" d="M28 24 L60 96 L92 24" fill="none" stroke="#164A8A"
+            stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse class="preloader__swoosh" cx="60" cy="66" rx="42" ry="17"
+               fill="none" stroke="#D81F3C" stroke-width="9" stroke-linecap="round"
+               transform="rotate(-20 60 66)"/>
+    </svg>
+  </div>
+  <p class="preloader__text">Vascular Clinic</p>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════ -->
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+
+    <a href="#inicio" class="brand" aria-label="Vascular Clinic - Inicio">
+      <img src="assets/logo.png" alt="Vascular Clinic" class="brand__logo" width="145" height="48">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#sintomas" class="nav__link">¿Es tu caso?</a>
+      <a href="#servicios" class="nav__link">Servicios</a>
+      <a href="#doctores" class="nav__link">Doctores</a>
+      <a href="#sedes" class="nav__link">Sedes</a>
+      <a href="#horarios" class="nav__link">Horarios</a>
+      <a href="#faq" class="nav__link">Preguntas</a>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__cta js-wa"
+       href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+       data-wa="Hola Vascular Clinic, quiero agendar una cita."
+       target="_blank" rel="noopener">
+      <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+      <span>Agendar cita</span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Menú móvil -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__nav" aria-label="Navegación móvil">
+    <a href="#sintomas" class="mobile-menu__link">¿Es tu caso?</a>
+    <a href="#servicios" class="mobile-menu__link">Servicios</a>
+    <a href="#doctores" class="mobile-menu__link">Doctores</a>
+    <a href="#sedes" class="mobile-menu__link">Sedes</a>
+    <a href="#horarios" class="mobile-menu__link">Horarios</a>
+    <a href="#faq" class="mobile-menu__link">Preguntas frecuentes</a>
+    <a class="btn btn--primary mobile-menu__cta js-wa"
+       href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+       data-wa="Hola Vascular Clinic, quiero agendar una cita."
+       target="_blank" rel="noopener">Agendar por WhatsApp</a>
+  </nav>
+</div>
+
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+
+  <canvas class="hero__canvas" id="veinCanvas" aria-hidden="true"></canvas>
+
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1" data-parallax="0.05"></span>
+    <span class="blob blob--2" data-parallax="0.09"></span>
+    <span class="blob blob--3" data-parallax="0.07"></span>
+    <span class="hero__mesh"></span>
+    <span class="hero__grid"></span>
+  </div>
+
+  <!-- Línea de pulso / ECG que se dibuja sola -->
+  <svg class="hero__pulse" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path class="pulse-path" d="M0 60 H320 l22 -42 l26 84 l24 -60 l20 30 h60 l18 -50 l24 70 l22 -38 h664"
+          fill="none" stroke="#D81F3C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="container hero__inner">
+
+    <span class="pill" data-anim="fade-up">
+      <span class="pill__dot"></span>
+      7 sedes en Panamá · Atención especializada
+    </span>
+
+    <h1 class="hero__title" data-split data-anim="fade-up">
+      Cuidamos la salud de <em>tus venas</em>
+    </h1>
+
+    <p class="hero__sub" data-anim="fade-up">
+      Consulta vascular, escleroterapia y Eco-Doppler con especialistas.
+      Evaluamos tu caso y te decimos exactamente qué necesitas.
+    </p>
+
+    <div class="hero__actions" data-anim="fade-up">
+      <a class="btn btn--primary btn--lg js-wa js-magnetic"
+         href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+         data-wa="Hola Vascular Clinic, quiero agendar una cita."
+         target="_blank" rel="noopener">
+        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        <span>Agendar por WhatsApp</span>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="#servicios">Ver servicios</a>
+    </div>
+
+    <p class="hero__micro" data-anim="fade-up">
+      <svg viewBox="0 0 24 24" class="ico-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Te respondemos por WhatsApp y confirmamos tu horario disponible
+    </p>
+
+    <div class="stats" data-anim="fade-up">
+      <div class="stat">
+        <span class="stat__num" data-count="7">0</span>
+        <span class="stat__label">Sedes en Panamá</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="2">0</span>
+        <span class="stat__label">Especialistas</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="6">0</span>
+        <span class="stat__label">Servicios</span>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="#sintomas" class="scroll-hint" aria-label="Bajar a la siguiente sección">
+    <span class="scroll-hint__mouse"><span></span></span>
+  </a>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     BARRA DE CONFIANZA (marquee)
+     ══════════════════════════════════════════════════════════ -->
+<div class="marquee" aria-label="Nuestras características">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span class="marquee__item">Especialistas en cirugía vascular</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Eco-Doppler venoso</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Tratamientos ambulatorios</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Atención en 7 sedes</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Escleroterapia</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Curación avanzada de heridas</span><span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group" aria-hidden="true">
+      <span class="marquee__item">Especialistas en cirugía vascular</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Eco-Doppler venoso</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Tratamientos ambulatorios</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Atención en 7 sedes</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Escleroterapia</span><span class="marquee__sep">✦</span>
+      <span class="marquee__item">Curación avanzada de heridas</span><span class="marquee__sep">✦</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SÍNTOMAS — ¿Es tu caso?
+     ══════════════════════════════════════════════════════════ -->
+<section class="section" id="sintomas">
+  <div class="container">
+
+    <header class="sec-head">
+      <span class="sec-head__eyebrow" data-anim="fade-up">Señales de alerta</span>
+      <h2 class="sec-head__title" data-anim="fade-up">¿Es tu caso?</h2>
+      <p class="sec-head__sub" data-anim="fade-up">
+        Los problemas venosos avanzan en silencio. Si reconoces uno o más de estos signos,
+        vale la pena una evaluación con un especialista.
+      </p>
+    </header>
+
+    <div class="grid grid--3" data-stagger>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--wave">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7c3-3 6 3 9 0s6-3 9 0"/><path d="M3 13c3-3 6 3 9 0s6-3 9 0"/><path d="M3 19c3-3 6 3 9 0s6-3 9 0"/></svg>
+        </span>
+        <h3>Várices visibles</h3>
+        <p>Venas abultadas, torcidas o azuladas que sobresalen en piernas o muslos.</p>
+      </article>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--spin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3.5 3.5M14.5 14.5 18 18M18 6l-3.5 3.5M9.5 14.5 6 18"/></svg>
+        </span>
+        <h3>Arañitas vasculares</h3>
+        <p>Pequeñas venas rojas o moradas en forma de red, sobre todo en piernas.</p>
+      </article>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--press">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10"/><path d="m8 9 4 4 4-4"/><path d="M5 18h14"/><path d="M5 21h14"/></svg>
+        </span>
+        <h3>Pesadez y dolor</h3>
+        <p>Sensación de piernas cansadas o adoloridas, que empeora al final del día.</p>
+      </article>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--swell">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S6 9.5 6 14a6 6 0 0 0 12 0c0-4.5-6-11.5-6-11.5Z"/></svg>
+        </span>
+        <h3>Hinchazón de tobillos</h3>
+        <p>Los pies o tobillos se inflaman, y la media deja marca al quitártela.</p>
+      </article>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--tick">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+        </span>
+        <h3>Calambres nocturnos</h3>
+        <p>Despiertas con calambres, hormigueo o inquietud en las piernas.</p>
+      </article>
+
+      <article class="symptom" data-anim="fade-up">
+        <span class="symptom__icon symptom__icon--beat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21.4l8.8-8.4a5.2 5.2 0 0 0 0-7.4Z"/></svg>
+        </span>
+        <h3>Heridas que no sanan</h3>
+        <p>Úlceras o llagas en la pierna que tardan semanas en cerrar o reaparecen.</p>
+      </article>
+
+    </div>
+
+    <div class="cta-inline" data-anim="scale-in">
+      <div>
+        <h3>¿Te identificas con uno o más?</h3>
+        <p>Escríbenos y te orientamos sobre el estudio o tratamiento que corresponde a tu caso.</p>
+      </div>
+      <a class="btn btn--primary js-wa js-magnetic"
+         href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+         data-wa="Hola, tengo algunos síntomas en las piernas y quiero una orientación. ¿Podemos agendar una cita?"
+         target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SERVICIOS
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--alt" id="servicios">
+  <div class="container">
+
+    <header class="sec-head">
+      <span class="sec-head__eyebrow" data-anim="fade-up">Lo que hacemos</span>
+      <h2 class="sec-head__title" data-anim="fade-up">Nuestros servicios</h2>
+      <p class="sec-head__sub" data-anim="fade-up">
+        Cada tratamiento se define después de evaluar tu caso. Escríbenos por WhatsApp
+        y te indicamos el precio y la disponibilidad para el servicio que necesitas.
+      </p>
+    </header>
+
+    <div class="grid grid--3" data-stagger>
+
+      <!-- 1 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge">Primera visita</span>
+        <h3 class="service__name">Consulta Vascular</h3>
+        <p class="service__doc">Dra. Lady Pineda</p>
+        <p class="service__desc">Evaluación clínica completa de tus piernas para identificar el origen del problema y definir el plan de tratamiento.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            60 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Consulta Vascular (Dra. Lady Pineda). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+      <!-- 2 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge">Primera visita</span>
+        <h3 class="service__name">Consulta Vascular</h3>
+        <p class="service__doc">Dr. Luis Camaño</p>
+        <p class="service__desc">Valoración especializada de várices, arañitas y molestias en las piernas, con recomendación de estudios si aplica.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            30 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Consulta Vascular (Dr. Luis Camaño). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+      <!-- 3 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge service__badge--hot">Más solicitado</span>
+        <h3 class="service__name">Escleroterapia</h3>
+        <p class="service__doc">Dra. Lady Pineda</p>
+        <p class="service__desc">Tratamiento para eliminar várices y arañitas mediante microinyecciones. Procedimiento ambulatorio, sin cirugía.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            120 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Escleroterapia (Dra. Lady Pineda). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+      <!-- 4 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge service__badge--hot">Más solicitado</span>
+        <h3 class="service__name">Escleroterapia</h3>
+        <p class="service__doc">Dr. Luis Camaño</p>
+        <p class="service__desc">Sesión de escleroterapia para el cierre de venas dilatadas, con retorno inmediato a tus actividades diarias.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            90 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Escleroterapia (Dr. Luis Camaño). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+      <!-- 5 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge">Diagnóstico</span>
+        <h3 class="service__name">Eco-Doppler venoso bilateral</h3>
+        <p class="service__doc">Dr. Luis Camaño</p>
+        <p class="service__desc">Ultrasonido que estudia el flujo de sangre en ambas piernas. Indoloro y sin radiación: es el estudio clave para decidir el tratamiento.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            60 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Eco-Doppler venoso bilateral (Dr. Luis Camaño). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+      <!-- 6 -->
+      <article class="service js-tilt" data-anim="fade-up">
+        <span class="service__glow" aria-hidden="true"></span>
+        <span class="service__badge">Seguimiento</span>
+        <h3 class="service__name">Curación Avanzada</h3>
+        <p class="service__doc">Dra. Lady Pineda</p>
+        <p class="service__desc">Manejo especializado de heridas y úlceras de difícil cicatrización, con apósitos y técnicas de curación avanzada.</p>
+        <div class="service__meta">
+          <span class="chip chip--time">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            60 min
+          </span>
+          <span class="chip chip--price">Consultar precio por WhatsApp</span>
+        </div>
+        <a class="btn btn--primary btn--block js-wa"
+           href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+           data-wa="Hola, quiero agendar: Curación Avanzada (Dra. Lady Pineda). ¿Qué disponibilidad tienen?"
+           target="_blank" rel="noopener">Agendar este servicio</a>
+      </article>
+
+    </div>
+
+    <p class="note" data-anim="fade-in">
+      Los precios y la duración pueden variar según la evaluación médica y la sede.
+      Confírmalos por WhatsApp antes de tu cita.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     DOCTORES
+     ══════════════════════════════════════════════════════════ -->
+<section class="section" id="doctores">
+  <div class="container">
+
+    <header class="sec-head">
+      <span class="sec-head__eyebrow" data-anim="fade-up">Quiénes te atienden</span>
+      <h2 class="sec-head__title" data-anim="fade-up">Nuestros especialistas</h2>
+      <p class="sec-head__sub" data-anim="fade-up">
+        Tu cita es siempre con un especialista. Puedes elegir con quién quieres atenderte.
+      </p>
+    </header>
+
+    <div class="grid grid--2" data-stagger>
+
+      <article class="doctor" data-anim="slide-right">
+        <!-- Para usar una foto real: reemplaza el <span class="doctor__avatar"> por
+             <img src="assets/dra-pineda.jpg" alt="Dra. Lady Pineda" class="doctor__photo"> -->
+        <span class="doctor__avatar" aria-hidden="true">
+          <span class="doctor__initials">LP</span>
+          <span class="doctor__ring"></span>
+        </span>
+        <div class="doctor__body">
+          <h3 class="doctor__name">Dra. Lady Pineda</h3>
+          <p class="doctor__role">Especialista en salud venosa</p>
+          <ul class="doctor__list">
+            <li>Consulta Vascular <span>60 min</span></li>
+            <li>Escleroterapia <span>120 min</span></li>
+            <li>Curación Avanzada <span>60 min</span></li>
+          </ul>
+          <a class="btn btn--outline btn--block js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita con la Dra. Lady Pineda."
+             target="_blank" rel="noopener">Agendar con la Dra. Pineda</a>
+        </div>
+      </article>
+
+      <article class="doctor" data-anim="slide-left">
+        <!-- Para usar una foto real: reemplaza el <span class="doctor__avatar"> por
+             <img src="assets/dr-camano.jpg" alt="Dr. Luis Camaño" class="doctor__photo"> -->
+        <span class="doctor__avatar doctor__avatar--red" aria-hidden="true">
+          <span class="doctor__initials">LC</span>
+          <span class="doctor__ring"></span>
+        </span>
+        <div class="doctor__body">
+          <h3 class="doctor__name">Dr. Luis Camaño</h3>
+          <p class="doctor__role">Especialista en salud venosa</p>
+          <ul class="doctor__list">
+            <li>Consulta Vascular <span>30 min</span></li>
+            <li>Escleroterapia <span>90 min</span></li>
+            <li>Eco-Doppler venoso bilateral <span>60 min</span></li>
+          </ul>
+          <a class="btn btn--outline btn--block js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita con el Dr. Luis Camaño."
+             target="_blank" rel="noopener">Agendar con el Dr. Camaño</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SEDES
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--alt" id="sedes">
+  <div class="container">
+
+    <header class="sec-head">
+      <span class="sec-head__eyebrow" data-anim="fade-up">Dónde estamos</span>
+      <h2 class="sec-head__title" data-anim="fade-up">7 sedes en Panamá</h2>
+      <p class="sec-head__sub" data-anim="fade-up">
+        Elige la sede que te quede más cerca. Escríbenos y te confirmamos qué días
+        atiende cada especialista ahí.
+      </p>
+    </header>
+
+    <div class="grid grid--3" data-stagger>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">01</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Hospital Brisas</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/n2gzNk0hN7pymtbd1" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Hospital Brisas. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">02</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Hotel Clinic</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/8wgYEoyvmerbMD5dD" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Hotel Clinic. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">03</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Hospital MiniMed</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/wGbLOmcKt3lIQfrVT" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Hospital MiniMed. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">04</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Clínica Hospital Dr. Saturno</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/XyKdYkk3T5AhhKMq1" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Clínica Hospital Dr. Saturno. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">05</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Clínica Corazón de Jesús</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/9F8PowMsAj1nrHqzg" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Clínica Corazón de Jesús. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">06</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Clínica de Especialidades Coclé</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/eLJ7XJrBUPtryweuC" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Clínica de Especialidades Coclé. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="venue" data-anim="fade-up">
+        <span class="venue__num">07</span>
+        <span class="venue__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <h3 class="venue__name">Hospital Panamericano</h3>
+        <div class="venue__actions">
+          <a class="btn btn--outline btn--xs" href="https://share.google/JS6Mn1ri2UEOBTmsL" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--primary btn--xs js-wa"
+             href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+             data-wa="Hola, quiero agendar una cita en Hospital Panamericano. ¿Qué horarios tienen disponibles?"
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HORARIOS
+     ══════════════════════════════════════════════════════════ -->
+<section class="section" id="horarios">
+  <div class="container">
+    <div class="schedule" data-anim="scale-in">
+
+      <span class="schedule__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l4 2.5"/></svg>
+      </span>
+
+      <h2 class="schedule__title">Horarios y disponibilidad</h2>
+
+      <p class="schedule__text">
+        Nuestros horarios <strong>varían según la sede y el especialista</strong>, y la agenda
+        cambia cada semana. Por eso no publicamos un horario fijo: preferimos darte la
+        información correcta.
+      </p>
+
+      <p class="schedule__highlight">
+        Escríbenos por WhatsApp y te decimos el <strong>próximo cupo disponible</strong>
+        en la sede que elijas.
+      </p>
+
+      <a class="btn btn--primary btn--lg js-wa js-magnetic"
+         href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+         data-wa="Hola, quiero confirmar disponibilidad de horarios para una cita."
+         target="_blank" rel="noopener">
+        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        <span>Consultar disponibilidad</span>
+      </a>
+
+      <p class="schedule__phone">
+        O llámanos al <a href="tel:+50769866587">+507 6986-6587</a>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FAQ
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+
+    <header class="sec-head">
+      <span class="sec-head__eyebrow" data-anim="fade-up">Antes de escribirnos</span>
+      <h2 class="sec-head__title" data-anim="fade-up">Preguntas frecuentes</h2>
+    </header>
+
+    <div class="faq" data-stagger>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿La escleroterapia duele?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Se usan agujas muy finas, por lo que la mayoría de pacientes describe solo un ligero
+          ardor o pinchazo momentáneo. Es un procedimiento ambulatorio: puedes irte caminando
+          y retomar tu rutina el mismo día.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Cuántas sesiones voy a necesitar?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Depende de la cantidad y el calibre de las venas a tratar. Solo el especialista
+          puede decírtelo después de evaluarte en la consulta vascular; en muchos casos se
+          requiere más de una sesión, espaciadas entre sí.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Qué es un Eco-Doppler venoso?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Es un ultrasonido que muestra cómo circula la sangre por tus venas. No duele, no
+          usa radiación y no requiere preparación especial. Es el estudio que permite saber
+          con certeza qué tratamiento necesitas.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Necesito referencia médica para agendar?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>No es necesaria para la consulta vascular. Si tu seguro la exige, escríbenos por
+          WhatsApp y te orientamos sobre lo que debes llevar.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Cuánto cuesta cada servicio?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>El costo varía según el servicio, el especialista y lo que determine la evaluación
+          médica. Escríbenos por WhatsApp indicando qué servicio te interesa y te damos el
+          precio actualizado al momento.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Qué horarios manejan?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Los horarios cambian según la sede y la agenda de cada especialista, por eso no
+          publicamos un horario fijo. Escríbenos por WhatsApp y te confirmamos la
+          disponibilidad real del momento.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿Cómo agendo mi cita?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Escríbenos al WhatsApp <strong>+507 6986-6587</strong> indicando el servicio que
+          necesitas y la sede que prefieres. Te confirmamos disponibilidad y reservamos tu
+          espacio.</p>
+        </div></div>
+      </div>
+
+      <div class="faq__item" data-anim="fade-up">
+        <button class="faq__q" aria-expanded="false">
+          <span>¿En qué sedes atienden?</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <p>Atendemos en 7 sedes: Hospital Brisas, Hotel Clinic, Hospital MiniMed, Clínica
+          Hospital Dr. Saturno, Clínica Corazón de Jesús, Clínica de Especialidades Coclé y
+          Hospital Panamericano. <a href="#sedes">Ver ubicaciones</a>.</p>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CTA FINAL
+     ══════════════════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="final-cta__bg" aria-hidden="true"></div>
+  <div class="container final-cta__inner">
+    <h2 data-anim="fade-up">Da el primer paso hoy</h2>
+    <p data-anim="fade-up">
+      Una evaluación a tiempo evita complicaciones. Escríbenos y agenda tu cita
+      en la sede que prefieras.
+    </p>
+    <a class="btn btn--white btn--lg js-wa js-magnetic" data-anim="scale-in"
+       href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+       data-wa="Hola Vascular Clinic, quiero agendar una cita."
+       target="_blank" rel="noopener">
+      <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+      <span>Agendar por WhatsApp</span>
+    </a>
+    <p class="final-cta__phone" data-anim="fade-in">
+      <a href="tel:+50769866587">+507 6986-6587</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__col footer__col--brand">
+      <img src="assets/logo-blanco.png" alt="Vascular Clinic" class="footer__logo" width="169" height="56" loading="lazy">
+      <p>Especialistas en salud venosa. Evaluamos, diagnosticamos y tratamos várices,
+      arañitas y heridas de difícil cicatrización.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="#sintomas">¿Es tu caso?</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#doctores">Doctores</a>
+      <a href="#sedes">Sedes</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#faq">Preguntas frecuentes</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Sedes</h4>
+      <a href="https://share.google/n2gzNk0hN7pymtbd1" target="_blank" rel="noopener">Hospital Brisas</a>
+      <a href="https://share.google/8wgYEoyvmerbMD5dD" target="_blank" rel="noopener">Hotel Clinic</a>
+      <a href="https://share.google/wGbLOmcKt3lIQfrVT" target="_blank" rel="noopener">Hospital MiniMed</a>
+      <a href="https://share.google/XyKdYkk3T5AhhKMq1" target="_blank" rel="noopener">Clínica Hospital Dr. Saturno</a>
+      <a href="https://share.google/9F8PowMsAj1nrHqzg" target="_blank" rel="noopener">Clínica Corazón de Jesús</a>
+      <a href="https://share.google/eLJ7XJrBUPtryweuC" target="_blank" rel="noopener">Clínica de Especialidades Coclé</a>
+      <a href="https://share.google/JS6Mn1ri2UEOBTmsL" target="_blank" rel="noopener">Hospital Panamericano</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a class="js-wa"
+         href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+         data-wa="Hola Vascular Clinic, quiero agendar una cita."
+         target="_blank" rel="noopener">WhatsApp: +507 6986-6587</a>
+      <a href="tel:+50769866587">Llamar: +507 6986-6587</a>
+      <p class="footer__hint">Los horarios se confirman por WhatsApp según la sede.</p>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© <span id="year">2026</span> Vascular Clinic. Todos los derechos reservados.</p>
+    <p class="footer__disclaimer">
+      Este sitio es informativo y no sustituye una consulta médica presencial.
+      Ante una emergencia, acude al centro de salud más cercano.
+    </p>
+  </div>
+</footer>
+
+
+<!-- Botón flotante WhatsApp -->
+<a class="wa-fab js-wa" id="waFab"
+   href="https://wa.me/50769866587?text=Hola%20Vascular%20Clinic%2C%20quiero%20agendar%20una%20cita."
+   data-wa="Hola Vascular Clinic, quiero agendar una cita."
+   target="_blank" rel="noopener" aria-label="Agendar cita por WhatsApp">
+  <span class="wa-fab__ring" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  <span class="wa-fab__tip" id="waTip">¿Agendamos tu cita?</span>
+</a>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     DATOS ESTRUCTURADOS (SEO)
+     ══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Vascular Clinic",
+  "description": "Especialistas en salud venosa en Panamá: consulta vascular, escleroterapia, Eco-Doppler venoso bilateral y curación avanzada.",
+  "medicalSpecialty": "Vascular",
+  "telephone": "+507 6986-6587",
+  "logo": "assets/logo.png",
+  "areaServed": { "@type": "Country", "name": "Panamá" },
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "Consulta Vascular" },
+    { "@type": "MedicalProcedure", "name": "Escleroterapia" },
+    { "@type": "MedicalTest", "name": "Eco-Doppler venoso bilateral" },
+    { "@type": "MedicalProcedure", "name": "Curación Avanzada" }
+  ],
+  "employee": [
+    { "@type": "Physician", "name": "Dra. Lady Pineda", "medicalSpecialty": "Vascular" },
+    { "@type": "Physician", "name": "Dr. Luis Camaño", "medicalSpecialty": "Vascular" }
+  ],
+  "department": [
+    { "@type": "MedicalClinic", "name": "Hospital Brisas", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Hotel Clinic", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Hospital MiniMed", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Clínica Hospital Dr. Saturno", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Clínica Corazón de Jesús", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Clínica de Especialidades Coclé", "telephone": "+507 6986-6587" },
+    { "@type": "MedicalClinic", "name": "Hospital Panamericano", "telephone": "+507 6986-6587" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿La escleroterapia duele?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se usan agujas muy finas, por lo que la mayoría de pacientes describe solo un ligero ardor o pinchazo momentáneo. Es ambulatorio y puedes retomar tu rutina el mismo día." } },
+    { "@type": "Question", "name": "¿Cuántas sesiones voy a necesitar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende de la cantidad y el calibre de las venas a tratar. El especialista lo define tras evaluarte en la consulta vascular." } },
+    { "@type": "Question", "name": "¿Qué es un Eco-Doppler venoso?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es un ultrasonido que muestra cómo circula la sangre por tus venas. No duele, no usa radiación y no requiere preparación especial." } },
+    { "@type": "Question", "name": "¿Necesito referencia médica para agendar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No es necesaria para la consulta vascular. Si tu seguro la exige, te orientamos por WhatsApp sobre lo que debes llevar." } },
+    { "@type": "Question", "name": "¿Cuánto cuesta cada servicio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El costo varía según el servicio, el especialista y la evaluación médica. Escríbenos por WhatsApp al +507 6986-6587 y te damos el precio actualizado." } },
+    { "@type": "Question", "name": "¿Qué horarios manejan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Los horarios cambian según la sede y la agenda de cada especialista. Escríbenos por WhatsApp al +507 6986-6587 y te confirmamos la disponibilidad real." } },
+    { "@type": "Question", "name": "¿Cómo agendo mi cita?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos al WhatsApp +507 6986-6587 indicando el servicio y la sede que prefieres. Te confirmamos disponibilidad y reservamos tu espacio." } },
+    { "@type": "Question", "name": "¿En qué sedes atienden?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hospital Brisas, Hotel Clinic, Hospital MiniMed, Clínica Hospital Dr. Saturno, Clínica Corazón de Jesús, Clínica de Especialidades Coclé y Hospital Panamericano." } }
+  ]
+}
+</script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
