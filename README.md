@@ -208,8 +208,22 @@ git push
 
 Luego presiona **Deploy** en EasyPanel (o activa el auto-deploy por webhook).
 
-> **Si un cambio no se ve:** EasyPanel reutiliza capas de Docker en caché.
-> Usa la opción **Force rebuild** para reconstruir desde cero.
+> **Si un cambio no se ve:** primero prueba una recarga forzada con `Ctrl + Shift + R`.
+> Si aun así no aparece, EasyPanel reutiliza capas de Docker en caché: usa la opción
+> **Force rebuild** para reconstruir desde cero.
+
+### Sobre la caché (importante)
+
+El HTML se sirve con `no-cache` y el CSS/JS también revalidan en cada visita usando ETag
+(el navegador recibe un `304` vacío si no cambió nada, así que casi no cuesta).
+
+**Nunca uses `Cache-Control: immutable` en este proyecto.** Los archivos tienen nombre fijo
+(`styles.css`, `main.js`), así que `immutable` hace que el navegador se quede con la versión
+vieja durante un año mientras el HTML sí se actualiza — y la página se rompe para todos los
+que ya habían entrado. Esto pasó y por eso los enlaces del HTML llevan `?v=2`: fue un rescate
+puntual para las cachés ya afectadas.
+
+Con la configuración actual **no necesitas subir ese número** en cada cambio.
 
 ### Probar el Docker localmente (opcional)
 

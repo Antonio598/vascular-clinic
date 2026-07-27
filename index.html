@@ -24,8 +24,10 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 <link rel="preload" as="image" href="assets/logo.png">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/animations.css">
+<!-- El ?v=2 rescata a los navegadores que cachearon la versión anterior
+     cuando el servidor enviaba "immutable". Ver nota en el README. -->
+<link rel="stylesheet" href="css/styles.css?v=2">
+<link rel="stylesheet" href="css/animations.css?v=2">
 
 <!-- Marca el documento como "con JavaScript" ANTES de pintar, para que las
      animaciones puedan ocultar elementos sin parpadeo. Si el JS está desactivado
@@ -947,7 +949,7 @@
 }
 </script>
 
-<script src="js/main.js" defer></script>
-<script src="js/cookies.js" defer></script>
+<script src="js/main.js?v=2" defer></script>
+<script src="js/cookies.js?v=2" defer></script>
 </body>
 </html>
